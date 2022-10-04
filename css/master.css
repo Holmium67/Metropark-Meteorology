@@ -1,51 +1,9 @@
+/* Element Styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.background {
-    background: rgb(73,134,52);
-    background: linear-gradient(142deg, rgba(73,134,52,1) 44%, rgb(132, 204, 124) 100%);
-    width: 50%;
-    height: 100%;
-    z-index: 1;
-    position: absolute;
-    opacity: 85%;
-}
-
-.metropark {
-    position: absolute;
-    font-size: 70px;
-    top: 10%;
-    left: 10%;
-    width: 20%;
-    z-index: 1;
-    color: rgb(242, 242, 242);
-   /* -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black; */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    font-variant: small-caps;
-    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.536));
-}
-
-.Meteorology {
-    position: absolute;
-    font-size: 80px;
-    top: 20%;
-    left: 5%;
-    width: 20%;
-    z-index: 1;
-    color: rgb(242, 242, 242);
-   /* -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black; */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    font-variant: small-caps;
-    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.536));
 }
 
 h2 {
@@ -86,6 +44,52 @@ button {
 button:hover {
     background-color: rgb(255, 255, 255);
     transition: 0.3s;
+}
+
+/* Class Styles */
+
+.background {
+    background: rgb(73,134,52);
+    background: linear-gradient(142deg, rgba(73,134,52,1) 44%, rgb(132, 204, 124) 100%);
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    opacity: 85%;
+}
+
+.metropark {
+    position: absolute;
+    font-size: 70px;
+    top: 10%;
+    left: 10%;
+    width: 20%;
+    z-index: 1;
+    color: rgb(242, 242, 242);
+   /* -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-variant: small-caps;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.536));
+}
+
+.meteorology {
+    position: absolute;
+    font-size: 80px;
+    top: 20%;
+    left: 5%;
+    width: 20%;
+    z-index: 1;
+    color: rgb(242, 242, 242);
+   /* -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-variant: small-caps;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.536));
 }
 
 .video {
