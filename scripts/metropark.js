@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 /*
 
 All metropark lat/long
@@ -20,12 +18,14 @@ Lake Erie => 42.062746857116025, -83.19873038085419
 
 */
 
+
+const API_KEY = "replace me with api key :)";
+
 /**
  * Enum for latitude and longitude of Metropark Locations.
  * @readonly
  * @enum {{lat: string, long: string}}
  */
- 
 const MetroparkCoords = Object.freeze({
 
     INDIANSPRINGS: { lat: 42.70610034334738, long: -83.48450809070415},
@@ -42,4 +42,20 @@ const MetroparkCoords = Object.freeze({
     OAKWOODS: { lat: 42.108980928421765, long: -83.34440025541288},
     LAKEERIE: { lat: 42.062746857116025, long: -83.19873038085419}
 
-  });
+});
+
+let urlArr = [];
+
+for (const key in MetroparkCoords) {
+    if (Object.hasOwnProperty.call(MetroparkCoords, key)) {
+        const element = MetroparkCoords[key];
+
+        // construct URL
+
+        urlArr.push("api.openweathermap.org/data/2.5/forecast/daily?lat=" + element.lat + "&lon=" + element.long + "&cnt=7&appid=" + API_KEY);
+        
+        console.log(key, " ", element); // TODO remove debug statement
+    }
+}
+
+console.log(urlArr); // TODO remove debug statement
