@@ -19,7 +19,7 @@ Lake Erie => 42.062746857116025, -83.19873038085419
 */
 
 
-const API_KEY = "replace me";
+const API_KEY = "";
 
 /**
  * Enum for latitude and longitude of Metropark Locations.
@@ -54,7 +54,7 @@ for (const key in MetroparkCoords) {
 
         // construct URL
 
-        urls.push("api.openweathermap.org/data/2.5/forecast/daily?lat=" + element.lat + "&lon=" + element.long + "&cnt=7&appid=" + API_KEY);
+        urls.push("https://api.openweathermap.org/data/2.5/forecast/daily?lat=" + element.lat + "&lon=" + element.long + "&cnt=7&appid=" + API_KEY);
         
         console.log(key, " ", element); // TODO remove debug statement
     }
@@ -63,20 +63,18 @@ for (const key in MetroparkCoords) {
 console.log(urls); // TODO remove debug statement
 
 
-// for (const url of urls) {
-// 
-//     promises.push(axios.get(url));
-// 
-// }
-// 
-// Promise.all([...promises])
-//     .then(function (output) {
-//         for (const result of output) {
-//             results.push(result);
-//         }
-//     })
-//     .finally(function () {
-//         console.log(results);
-//     });
+for (const url of urls) {
 
-// TODO Use js fetch instead of axios
+    promises.push(axios.get(url));
+
+}
+
+Promise.all([...promises])
+    .then(function (output) {
+        for (const result of output) {
+            results.push(result);
+        }
+    })
+    .finally(function () {
+        console.log(results);
+    });
