@@ -47,6 +47,9 @@ const MetroparkCoords = Object.freeze({
 let urls = [];
 let promises = [];
 let results = [];
+let WeatherData = {
+    
+};
 
 for (const key in MetroparkCoords) {
     if (Object.hasOwnProperty.call(MetroparkCoords, key)) {
@@ -59,9 +62,6 @@ for (const key in MetroparkCoords) {
         console.log(key, " ", element); // TODO remove debug statement
     }
 }
-
-console.log(urls); // TODO remove debug statement
-
 
 for (const url of urls) {
 
@@ -77,4 +77,11 @@ Promise.all([...promises])
     })
     .finally(function () {
         console.log(results);
+        parseWeatherData(results);
     });
+
+
+function parseWeatherData(results) {
+    const temp = JSON.parse(JSON.stringify(results));
+    console.log(temp);
+}
