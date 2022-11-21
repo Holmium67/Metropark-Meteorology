@@ -157,7 +157,7 @@ function popUp(key){
     popUp.appendChild(weatherList);
 
     if (popUp.style.display === "none"){
-        popUp.style.display = "inline";
+        popUp.style.display = "block";
     }
     else {
         if(lastOpenedKey === key) popUp.style.display = "none";
