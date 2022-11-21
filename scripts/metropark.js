@@ -19,7 +19,7 @@ Lake Erie => 42.062746857116025, -83.19873038085419
 */
 
 
-const API_KEY = "8fd87758dc8e22341867fa0d3bb59e96";
+const API_KEY = "";
 
 /**
  * Enum for latitude and longitude of Metropark Locations.
@@ -60,6 +60,7 @@ const MetroparkResults = {
     LAKEERIE: { temps: [] }
 };
 
+let lastOpenedKey = "";
 let urls = [];
 let promises = [];
 let results = [];
@@ -110,24 +111,57 @@ function parseWeatherData(results) {
     }
 }
 
-function insertWeatherImages(id, key, day) {
-    var src = document.getElementById(id);
-    for(const weatherData in MetroparkResults[key][day].weather) {
+function insertWeatherImages(element, weather) {
+    for(const weatherData of weather) {
         let img = new Image(50, 50);
         img.src = 'http://openweathermap.org/img/wn/' + weatherData.icon + '.png';
         img.alt = weatherData.description;
         img.classList.add("weatherIcon");
-        src.appendChild(img);
+        element.appendChild(img);
     }
 }
 
-function popUp(){
+function popUp(key){
     var popUp = document.getElementById("popUp");
+    popUp.innerHTML = "";
+
+    let weatherList = document.createElement('ul');
+    weatherList.classList.add("weatherList");
+
+    for (let index = 0; index < 7; index++) {
+
+        //assemble structure of row element
+        let weatherRow = document.createElement('li');
+        weatherRow.classList.add("weatherRow");
+        let high = document.createElement("p");
+        high.classList.add("weatherHigh");
+        let low = document.createElement("p");
+        low.classList.add("weatherLow");
+
+        //get data      
+        const day = MetroparkResults[key].temps[index];
+
+        //configure images and temperatures
+        insertWeatherImages(weatherRow, day.weather);
+        high.innerText = "" + day.high + "℉";
+        low.innerText = "" + day.low + "℉";
+
+        //add text to row
+        weatherRow.appendChild(high);
+        weatherRow.appendChild(low);
+
+        //add row to list
+        weatherList.appendChild(weatherRow);
+    }
+
+    popUp.appendChild(weatherList);
 
     if (popUp.style.display === "none"){
         popUp.style.display = "inline";
     }
-    else{
-        popUp.style.display = "none";
+    else {
+        if(lastOpenedKey === key) popUp.style.display = "none";
     }
+
+    lastOpenedKey = key;
 }
