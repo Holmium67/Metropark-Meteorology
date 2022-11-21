@@ -19,7 +19,7 @@ Lake Erie => 42.062746857116025, -83.19873038085419
 */
 
 
-const API_KEY = "";
+const API_KEY = "8fd87758dc8e22341867fa0d3bb59e96";
 
 /**
  * Enum for latitude and longitude of Metropark Locations.
@@ -116,7 +116,7 @@ function insertWeatherImages(id, key, day) {
         let img = new Image(50, 50);
         img.src = 'http://openweathermap.org/img/wn/' + weatherData.icon + '.png';
         img.alt = weatherData.description;
-        img.classList.add("owm-icon");
+        img.classList.add("weatherIcon");
         src.appendChild(img);
     }
 }
