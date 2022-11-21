@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metropark Meteorology</title>
-    <link rel="stylesheet" href="css/master.css">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="scripts/metropark.js"></script>
+    <link rel="stylesheet" href="css/metropark.css">
 </head>
-
 <body>
     <div class="background"></div>
     <h1 class="metropark">Metropark</h1>
-    <h1 class="meteorology">Meteorology</h1>
+    <h1 class="Meteorology">Meteorology</h1>
     <h2>Here Is Where Your Forecast Begins</h2>
     <video class="video" autoplay muted loop>
         <source src="media/Weather_-_11057.mp4" type="video/mp4">
     </video>
 
-    <button>Show Me The Weather!</button>
-</body>
+    <a href="./parkMap.html">
+        <button class="cta">Show Me The Weather!</button>
+    </a>
 
+    <a href="./parkMap.html">
+        <button class="mapButton">Map</button>
+    </a>
+    <button class="aboutButton">About Us</button>
+</body>
 </html>
