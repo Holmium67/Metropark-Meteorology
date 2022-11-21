@@ -9,13 +9,18 @@ body{
 }
 
 .background{
-    background: rgb(73,134,52);
-    background: linear-gradient(142deg, rgba(73,134,52,1) 44%, rgb(132, 204, 124) 100%);
+    background: rgb(52, 109, 134);
     width: 50%;
     height: 100%;
     z-index: 1;
     position: absolute;
     opacity: 85%;
+    background: rgba(104, 142, 202, 0.453);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+
 }
 
 .metropark{
@@ -54,42 +59,84 @@ body{
 
 h2{
     position: absolute;
-    font-size: 40px;
+    font-size: 45px;
     top: 40%;
     left: 5%;
     width: 40%;
     z-index: 1;
-    color: rgba(219, 219, 219, 0.947);
-    /* -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black; */
+    color: rgb(242, 242, 242);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.536));
     box-sizing: border-box;
 }
 
-button{
+.cta{
     top: 65%;
     left: 17%;
     position: absolute;
     z-index: 1;
     width: 15%;
     height: 10%;
-    background-color: rgba(230, 230, 230, 0.882);
     cursor: pointer;
     color: rgb(0, 0, 0);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 150%;
-    border-radius: 4px;
-    border: none;
-    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.536));
-    transition: 0.3s;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.453);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 button:hover{
     background-color: rgb(255, 255, 255);
     transition: 0.3s;
+}
+
+.mapButton{
+    top: 3%;
+    left: 82%;
+    position: absolute;
+    z-index: 1;
+    width: 6%;
+    height: 6%;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 120%;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.453);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.aboutButton{
+    top: 3%;
+    left: 90%;
+    position: absolute;
+    z-index: 1;
+    width: 8%;
+    height: 6%;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 120%;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.453);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .video{
@@ -100,4 +147,683 @@ button:hover{
     left: 0%;
     z-index: 0;
     object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MAP SECTION */
+
+
+
+
+
+.metroMap{
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    left: 2.5%;
+    top: 2.5%;
+}
+
+.point{
+    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+    transform-origin: 50% 50%;
+    border-radius: 50% 50% 50% 0;
+    padding: 0 3px 3px 0;
+    width: 30px;
+    height: 30px;
+    background: #6777d2;
+    position: absolute;
+    left: 38%;
+    top: 43.5%;
+    margin: -2.2em 0 0 -1.3em;
+    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.point:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin: 9px 0 0 6px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+  }
+
+  .point:hover{
+    width: 35px;
+    height: 35px;
+    top: 42.5%;
+  }
+
+  .point:hover::after{
+    height: 18px;
+    width: 18px;
+  }
+
+
+
+/* point 2 */
+
+
+.point2{
+    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+    transform-origin: 50% 50%;
+    border-radius: 50% 50% 50% 0;
+    padding: 0 3px 3px 0;
+    width: 30px;
+    height: 30px;
+    background: #6777d2;
+    position: absolute;
+    left: 32.8%;
+    top: 52%;
+    margin: -2.2em 0 0 -1.3em;
+    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.point2:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin: 9px 0 0 6px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+  }
+
+  .point2:hover{
+    width: 35px;
+    height: 35px;
+    top: 51%;
+  }
+
+  .point2:hover::after{
+    height: 18px;
+    width: 18px;
+  }
+
+
+  /* point 3 */
+
+
+  .point3{
+    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+    transform-origin: 50% 50%;
+    border-radius: 50% 50% 50% 0;
+    padding: 0 3px 3px 0;
+    width: 30px;
+    height: 30px;
+    background: #6777d2;
+    position: absolute;
+    left: 34.7%;
+    top: 57%;
+    margin: -2.2em 0 0 -1.3em;
+    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.point3:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin: 9px 0 0 6px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+  }
+
+  .point3:hover{
+    width: 35px;
+    height: 35px;
+    top: 56%;
+  }
+
+  .point3:hover::after{
+    height: 18px;
+    width: 18px;
+  }
+
+
+  /* point 4 */
+
+
+  .point4{
+    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+    transform-origin: 50% 50%;
+    border-radius: 50% 50% 50% 0;
+    padding: 0 3px 3px 0;
+    width: 30px;
+    height: 30px;
+    background: #6777d2;
+    position: absolute;
+    left: 36.8%;
+    top: 57%;
+    margin: -2.2em 0 0 -1.3em;
+    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.point4:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin: 9px 0 0 6px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+  }
+
+  .point4:hover{
+    width: 35px;
+    height: 35px;
+    top: 56%;
+  }
+
+  .point4:hover::after{
+    height: 18px;
+    width: 18px;
+  }
+
+
+  /* point 5 */
+
+
+  .point5{
+    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+    transform-origin: 50% 50%;
+    border-radius: 50% 50% 50% 0;
+    padding: 0 3px 3px 0;
+    width: 30px;
+    height: 30px;
+    background: #6777d2;
+    position: absolute;
+    left: 51.2%;
+    top: 72%;
+    margin: -2.2em 0 0 -1.3em;
+    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.point5:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin: 9px 0 0 6px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+  }
+
+  .point5:hover{
+    width: 35px;
+    height: 35px;
+    top: 71%;
+  }
+
+  .point5:hover::after{
+    height: 18px;
+    width: 18px;
+  }
+
+
+  /* point 6 */
+
+
+  .point6{
+    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+    transform-origin: 50% 50%;
+    border-radius: 50% 50% 50% 0;
+    padding: 0 3px 3px 0;
+    width: 30px;
+    height: 30px;
+    background: #6777d2;
+    position: absolute;
+    left: 53.4%;
+    top: 75%;
+    margin: -2.2em 0 0 -1.3em;
+    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.point6:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin: 9px 0 0 6px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+  }
+
+  .point6:hover{
+    width: 35px;
+    height: 35px;
+    top: 74%;
+  }
+
+  .point6:hover::after{
+    height: 18px;
+    width: 18px;
+  }
+
+  /* point 7 */
+
+
+  .point7{
+    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+    transform-origin: 50% 50%;
+    border-radius: 50% 50% 50% 0;
+    padding: 0 3px 3px 0;
+    width: 30px;
+    height: 30px;
+    background: #6777d2;
+    position: absolute;
+    left: 54.6%;
+    top: 77.5%;
+    margin: -2.2em 0 0 -1.3em;
+    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.point7:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin: 9px 0 0 6px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+  }
+
+  .point7:hover{
+    width: 35px;
+    height: 35px;
+    top: 76.5%;
+  }
+
+  .point7:hover::after{
+    height: 18px;
+    width: 18px;
+  }
+
+
+/* point 8 */
+
+
+.point8{
+    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+    transform-origin: 50% 50%;
+    border-radius: 50% 50% 50% 0;
+    padding: 0 3px 3px 0;
+    width: 30px;
+    height: 30px;
+    background: #6777d2;
+    position: absolute;
+    left: 60.1%;
+    top: 81%;
+    margin: -2.2em 0 0 -1.3em;
+    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.point8:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin: 9px 0 0 6px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    }
+
+    .point8:hover{
+    width: 35px;
+    height: 35px;
+    top: 80%;
+    }
+
+    .point8:hover::after{
+    height: 18px;
+    width: 18px;
+    }
+
+/* point 9 */
+
+
+.point9{
+    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+    transform-origin: 50% 50%;
+    border-radius: 50% 50% 50% 0;
+    padding: 0 3px 3px 0;
+    width: 30px;
+    height: 30px;
+    background: #6777d2;
+    position: absolute;
+    left: 75.7%;
+    top: 34.8%;
+    margin: -2.2em 0 0 -1.3em;
+    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.point9:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin: 9px 0 0 6px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    }
+
+    .point9:hover{
+    width: 35px;
+    height: 35px;
+    top: 34%;
+    }
+
+    .point9:hover::after{
+    height: 18px;
+    width: 18px;
+    }
+
+
+/* point 10 */
+
+
+.point10{
+    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+    transform-origin: 50% 50%;
+    border-radius: 50% 50% 50% 0;
+    padding: 0 3px 3px 0;
+    width: 30px;
+    height: 30px;
+    background: #6777d2;
+    position: absolute;
+    left: 70.4%;
+    top: 17%;
+    margin: -2.2em 0 0 -1.3em;
+    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.point10:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin: 9px 0 0 6px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    }
+
+    .point10:hover{
+    width: 35px;
+    height: 35px;
+    top: 16%;
+    }
+
+    .point10:hover::after{
+    height: 18px;
+    width: 18px;
+    }
+
+
+
+/* point 11 */
+
+
+.point11{
+    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+    transform-origin: 50% 50%;
+    border-radius: 50% 50% 50% 0;
+    padding: 0 3px 3px 0;
+    width: 30px;
+    height: 30px;
+    background: #6777d2;
+    position: absolute;
+    left: 65%;
+    top: 23%;
+    margin: -2.2em 0 0 -1.3em;
+    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.point11:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin: 9px 0 0 6px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    }
+
+    .point11:hover{
+    width: 35px;
+    height: 35px;
+    top: 22%;
+    }
+
+    .point11:hover::after{
+    height: 18px;
+    width: 18px;
+    }
+
+
+
+/* point 12 */
+
+
+.point12{
+    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+    transform-origin: 50% 50%;
+    border-radius: 50% 50% 50% 0;
+    padding: 0 3px 3px 0;
+    width: 30px;
+    height: 30px;
+    background: #6777d2;
+    position: absolute;
+    left: 49%;
+    top: 23%;
+    margin: -2.2em 0 0 -1.3em;
+    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.point12:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin: 9px 0 0 6px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    }
+
+    .point12:hover{
+    width: 35px;
+    height: 35px;
+    top: 22%;
+    }
+
+    .point12:hover::after{
+    height: 18px;
+    width: 18px;
+    }
+
+
+
+/* point 13 */
+
+
+.point13{
+    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+    transform-origin: 50% 50%;
+    border-radius: 50% 50% 50% 0;
+    padding: 0 3px 3px 0;
+    width: 30px;
+    height: 30px;
+    background: #6777d2;
+    position: absolute;
+    left: 43.2%;
+    top: 38%;
+    margin: -2.2em 0 0 -1.3em;
+    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.point13:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    margin: 9px 0 0 6px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+    }
+
+    .point13:hover{
+    width: 35px;
+    height: 35px;
+    top: 37%;
+    }
+
+    .point13:hover::after{
+    height: 18px;
+    width: 18px;
+    }
+
+
+.popUp{
+    position: absolute;
+    width: 250px;
+    height: 70px;
+    left: 18.5%;
+    top: 31%;
+    opacity: 85%;
+    background: rgba(93, 140, 220, 0.793);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px 20px 0px 20px;
+    display: none;
+    z-index: 1;
 }
