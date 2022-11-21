@@ -44,6 +44,22 @@ const MetroparkCoords = Object.freeze({
 
 });
 
+const MetroparkResults = {
+    INDIANSPRINGS: { temps: [] },
+    WOLCOTTMILL: { temps: [] },
+    STONEYCREEK: { temps: [] },
+    KENSINGTON: { temps: [] },
+    STCLAIR: { temps: [] },
+    HURONMEADOWS: { temps: [] },
+    HUDSONMILLS: { temps: [] },
+    DELHI: { temps: [] },
+    DEXTERHURON: { temps: [] },
+    LOWERHURON: { temps: [] },
+    WILLOW: { temps: [] },
+    OAKWOODS: { temps: [] },
+    LAKEERIE: { temps: [] }
+};
+
 let urls = [];
 let promises = [];
 let results = [];
@@ -57,7 +73,7 @@ for (const key in MetroparkCoords) {
 
         // construct URL
 
-        urls.push("https://api.openweathermap.org/data/2.5/forecast/daily?lat=" + element.lat + "&lon=" + element.long + "&cnt=7&appid=" + API_KEY);
+        urls.push("https://api.openweathermap.org/data/2.5/forecast/daily?lat=" + element.lat + "&lon=" + element.long + "&cnt=7&appid=" + API_KEY + "&units=imperial");
         
         console.log(key, " ", element); // TODO remove debug statement
     }
@@ -82,6 +98,25 @@ Promise.all([...promises])
 
 
 function parseWeatherData(results) {
-    const temp = JSON.parse(JSON.stringify(results));
-    console.log(temp);
+    let i = 0;
+    for(const key in MetroparkResults) {
+        for(let j = 0; j < 7; j++) {
+            const high = results[i].data.list[j].temp.max;
+            const low = results[i].data.list[j].temp.min;
+            const weather = results[i].data.list[j].weather;
+            MetroparkResults[key].temps.push({high: high, low: low, weather: weather});
+        }
+        i++;
+    }
+}
+
+function insertWeatherImages(id, key, day) {
+    var src = document.getElementById(id);
+    for(const weatherData in MetroparkResults[key][day].weather) {
+        let img = new Image(50, 50);
+        img.src = 'http://openweathermap.org/img/wn/' + weatherData.icon + '.png';
+        img.alt = weatherData.description;
+        img.classList.add("owm-icon");
+        src.appendChild(img);
+    }
 }
