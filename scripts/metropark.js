@@ -138,20 +138,29 @@ function popUp(key){
         let low = document.createElement("p");
         low.classList.add("weatherLow");
 
+        //let todayHeader = document.createElement("h3");
+        //low.classList.add("todayHeader");
+
         //get data      
         const day = MetroparkResults[key].temps[index];
 
         //configure images and temperatures
         insertWeatherImages(weatherRow, day.weather);
-        high.innerText = "" + day.high + "℉";
-        low.innerText = "" + day.low + "℉";
+        high.innerText = "High: " + day.high + "℉";
+        low.innerText = "Low: " + day.low + "℉";
+        
+        //todayHeader.innerText = "Today";
 
         //add text to row
-        weatherRow.appendChild(high);
-        weatherRow.appendChild(low);
+
 
         //add row to list
         weatherList.appendChild(weatherRow);
+        weatherList.appendChild(high);
+        weatherList.appendChild(low);
+        
+        
+        //weatherList.appendChild(todayHeader)
     }
 
     popUp.appendChild(weatherList);

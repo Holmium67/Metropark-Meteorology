@@ -172,50 +172,37 @@ button:hover{
     z-index: -1;
 }
 
-.point{
-    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
-    transform-origin: 50% 50%;
-    border-radius: 50% 50% 50% 0;
-    padding: 0 3px 3px 0;
-    width: 30px;
-    height: 30px;
-    background: #6777d2;
-    position: absolute;
-    left: 38%;
-    top: 43.5%;
-    margin: -2.2em 0 0 -1.3em;
-    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    cursor: pointer;
+
+
+.homeButton{
+  top: 3%;
+  left: 80%;
+  position: absolute;
+  z-index: 1;
+  width: 8%;
+  height: 6%;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 120%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.453);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.point:after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    margin: 9px 0 0 6px;
-    background: #ffffff;
+
+.point{
+    width: 30px;
+    height: 30px;
     position: absolute;
-    border-radius: 50%;
-      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-  }
-
-  .point:hover{
-    width: 35px;
-    height: 35px;
-    top: 42.5%;
-  }
-
-  .point:hover::after{
-    height: 18px;
-    width: 18px;
-  }
+    left: 36.8%;
+    top: 40%;
+    cursor: pointer;
+}
 
 
 
@@ -223,439 +210,123 @@ button:hover{
 
 
 .point2{
-    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
-    transform-origin: 50% 50%;
-    border-radius: 50% 50% 50% 0;
-    padding: 0 3px 3px 0;
     width: 30px;
     height: 30px;
-    background: #6777d2;
     position: absolute;
-    left: 32.8%;
-    top: 52%;
-    margin: -2.2em 0 0 -1.3em;
-    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    left: 31.7%;
+    top: 48.8%;
     cursor: pointer;
 }
-
-.point2:after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    margin: 9px 0 0 6px;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 50%;
-      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-  }
-
-  .point2:hover{
-    width: 35px;
-    height: 35px;
-    top: 51%;
-  }
-
-  .point2:hover::after{
-    height: 18px;
-    width: 18px;
-  }
 
 
   /* point 3 */
 
 
   .point3{
-    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
-    transform-origin: 50% 50%;
-    border-radius: 50% 50% 50% 0;
-    padding: 0 3px 3px 0;
     width: 30px;
     height: 30px;
-    background: #6777d2;
     position: absolute;
-    left: 34.7%;
-    top: 57%;
-    margin: -2.2em 0 0 -1.3em;
-    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    left: 33.4%;
+    top: 54%;
     cursor: pointer;
 }
-
-.point3:after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    margin: 9px 0 0 6px;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 50%;
-      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-  }
-
-  .point3:hover{
-    width: 35px;
-    height: 35px;
-    top: 56%;
-  }
-
-  .point3:hover::after{
-    height: 18px;
-    width: 18px;
-  }
 
 
   /* point 4 */
 
 
   .point4{
-    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
-    transform-origin: 50% 50%;
-    border-radius: 50% 50% 50% 0;
-    padding: 0 3px 3px 0;
     width: 30px;
     height: 30px;
-    background: #6777d2;
     position: absolute;
-    left: 36.8%;
-    top: 57%;
-    margin: -2.2em 0 0 -1.3em;
-    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    left: 35.5%;
+    top: 54%;
     cursor: pointer;
 }
 
-.point4:after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    margin: 9px 0 0 6px;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 50%;
-      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-  }
-
-  .point4:hover{
-    width: 35px;
-    height: 35px;
-    top: 56%;
-  }
-
-  .point4:hover::after{
-    height: 18px;
-    width: 18px;
-  }
 
 
   /* point 5 */
 
 
   .point5{
-    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
-    transform-origin: 50% 50%;
-    border-radius: 50% 50% 50% 0;
-    padding: 0 3px 3px 0;
     width: 30px;
     height: 30px;
-    background: #6777d2;
     position: absolute;
-    left: 51.2%;
-    top: 72%;
-    margin: -2.2em 0 0 -1.3em;
-    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    left: 50%;
+    top: 68%;
     cursor: pointer;
 }
-
-.point5:after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    margin: 9px 0 0 6px;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 50%;
-      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-  }
-
-  .point5:hover{
-    width: 35px;
-    height: 35px;
-    top: 71%;
-  }
-
-  .point5:hover::after{
-    height: 18px;
-    width: 18px;
-  }
 
 
   /* point 6 */
 
 
   .point6{
-    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
-    transform-origin: 50% 50%;
-    border-radius: 50% 50% 50% 0;
-    padding: 0 3px 3px 0;
     width: 30px;
     height: 30px;
-    background: #6777d2;
     position: absolute;
-    left: 53.4%;
-    top: 75%;
-    margin: -2.2em 0 0 -1.3em;
-    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    left: 52.1%;
+    top: 71.8%;
     cursor: pointer;
 }
-
-.point6:after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    margin: 9px 0 0 6px;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 50%;
-      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-  }
-
-  .point6:hover{
-    width: 35px;
-    height: 35px;
-    top: 74%;
-  }
-
-  .point6:hover::after{
-    height: 18px;
-    width: 18px;
-  }
 
   /* point 7 */
 
 
   .point7{
-    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
-    transform-origin: 50% 50%;
-    border-radius: 50% 50% 50% 0;
-    padding: 0 3px 3px 0;
     width: 30px;
     height: 30px;
-    background: #6777d2;
     position: absolute;
-    left: 54.6%;
-    top: 77.5%;
-    margin: -2.2em 0 0 -1.3em;
-    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    left: 53.2%;
+    top: 74.5%;
     cursor: pointer;
 }
 
-.point7:after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    margin: 9px 0 0 6px;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 50%;
-      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-  }
-
-  .point7:hover{
-    width: 35px;
-    height: 35px;
-    top: 76.5%;
-  }
-
-  .point7:hover::after{
-    height: 18px;
-    width: 18px;
-  }
 
 
 /* point 8 */
 
 
 .point8{
-    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
-    transform-origin: 50% 50%;
-    border-radius: 50% 50% 50% 0;
-    padding: 0 3px 3px 0;
     width: 30px;
     height: 30px;
-    background: #6777d2;
     position: absolute;
-    left: 60.1%;
-    top: 81%;
-    margin: -2.2em 0 0 -1.3em;
-    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    left: 58.8%;
+    top: 78%;
     cursor: pointer;
 }
-
-.point8:after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    margin: 9px 0 0 6px;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 50%;
-        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    }
-
-    .point8:hover{
-    width: 35px;
-    height: 35px;
-    top: 80%;
-    }
-
-    .point8:hover::after{
-    height: 18px;
-    width: 18px;
-    }
 
 /* point 9 */
 
 
 .point9{
-    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
-    transform-origin: 50% 50%;
-    border-radius: 50% 50% 50% 0;
-    padding: 0 3px 3px 0;
     width: 30px;
     height: 30px;
-    background: #6777d2;
     position: absolute;
-    left: 75.7%;
-    top: 34.8%;
-    margin: -2.2em 0 0 -1.3em;
-    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    left: 74.2%;
+    top: 31.5%;
     cursor: pointer;
 }
 
-.point9:after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    margin: 9px 0 0 6px;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 50%;
-        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    }
-
-    .point9:hover{
-    width: 35px;
-    height: 35px;
-    top: 34%;
-    }
-
-    .point9:hover::after{
-    height: 18px;
-    width: 18px;
-    }
 
 
 /* point 10 */
 
 
 .point10{
-    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
-    transform-origin: 50% 50%;
-    border-radius: 50% 50% 50% 0;
-    padding: 0 3px 3px 0;
     width: 30px;
     height: 30px;
-    background: #6777d2;
     position: absolute;
-    left: 70.4%;
-    top: 17%;
-    margin: -2.2em 0 0 -1.3em;
-    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    left: 69.2%;
+    top: 13.5%;
     cursor: pointer;
 }
 
-.point10:after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    margin: 9px 0 0 6px;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 50%;
-        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    }
+.point10:hover{
+  
+}
 
-    .point10:hover{
-    width: 35px;
-    height: 35px;
-    top: 16%;
-    }
-
-    .point10:hover::after{
-    height: 18px;
-    width: 18px;
-    }
 
 
 
@@ -663,49 +334,14 @@ button:hover{
 
 
 .point11{
-    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
-    transform-origin: 50% 50%;
-    border-radius: 50% 50% 50% 0;
-    padding: 0 3px 3px 0;
     width: 30px;
     height: 30px;
-    background: #6777d2;
     position: absolute;
-    left: 65%;
-    top: 23%;
-    margin: -2.2em 0 0 -1.3em;
-    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    left: 63.8%;
+    top: 19%;
     cursor: pointer;
 }
 
-.point11:after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    margin: 9px 0 0 6px;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 50%;
-        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    }
-
-    .point11:hover{
-    width: 35px;
-    height: 35px;
-    top: 22%;
-    }
-
-    .point11:hover::after{
-    height: 18px;
-    width: 18px;
-    }
 
 
 
@@ -713,49 +349,13 @@ button:hover{
 
 
 .point12{
-    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
-    transform-origin: 50% 50%;
-    border-radius: 50% 50% 50% 0;
-    padding: 0 3px 3px 0;
     width: 30px;
     height: 30px;
-    background: #6777d2;
     position: absolute;
-    left: 49%;
-    top: 23%;
-    margin: -2.2em 0 0 -1.3em;
-    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    left: 47.8%;
+    top: 19.5%;
     cursor: pointer;
 }
-
-.point12:after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    margin: 9px 0 0 6px;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 50%;
-        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    }
-
-    .point12:hover{
-    width: 35px;
-    height: 35px;
-    top: 22%;
-    }
-
-    .point12:hover::after{
-    height: 18px;
-    width: 18px;
-    }
 
 
 
@@ -763,49 +363,14 @@ button:hover{
 
 
 .point13{
-    transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
-    transform-origin: 50% 50%;
-    border-radius: 50% 50% 50% 0;
-    padding: 0 3px 3px 0;
     width: 30px;
     height: 30px;
-    background: #6777d2;
     position: absolute;
-    left: 43.2%;
-    top: 38%;
-    margin: -2.2em 0 0 -1.3em;
-    -webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    -moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
-    box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+    left: 42%;
+    top: 34.5%;
     cursor: pointer;
 }
 
-.point13:after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    margin: 9px 0 0 6px;
-    background: #ffffff;
-    position: absolute;
-    border-radius: 50%;
-        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    -moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    -webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
-    }
-
-    .point13:hover{
-    width: 35px;
-    height: 35px;
-    top: 37%;
-    }
-
-    .point13:hover::after{
-    height: 18px;
-    width: 18px;
-    }
 
 .popUp {
   width: fit-content;
@@ -815,25 +380,269 @@ button:hover{
   border: 0.5px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
   z-index: 10;
-  margin-left: auto;
+  margin-left: 10px;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .weatherRow{
   display: flex;
-  flex-direction: column;
-  padding-left:5px;
-  padding-right:5px;
+  flex-direction: row;
+  padding-left:6px;
+  padding-right:50px;
+  padding-bottom: 7px;
+  padding-top: 15px;
 }
 
 .weatherList {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .weatherRow p {
   text-align: center;
   font-size: 16px;
   padding-top: 5px;
+  font-family:'Times New Roman', Times, serif;
+  color: whitesmoke;
+  text-shadow: 5px black;
+  
+}
+
+.weatherRow h3{
+  font-family:'Times New Roman', Times, serif;
+  color: whitesmoke;
+  text-shadow: 5px black;
+  top: 0px;
+}
+
+
+
+
+
+/* ABOUT ME SECTION */
+
+
+.aboutBackground{
+  position: absolute;
+  width: 100%;
+  height: 400%;
+  top: 100%;
+  background-color: #c59f7c;
+  z-index: 1;
+}
+
+.aboutUsText{
+  font-size: 200px;
+  font-family:'Times New Roman', Times, serif;
+  font-style: bold;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: exclusion;
+}
+
+.aboutCloud{
+  display: flex;
+  width: 100%;
+  height: 70%;
+}
+
+.aboutHomeButton{
+  top: 3%;
+  left: 80%;
+  position: absolute;
+  z-index: 1;
+  width: 8%;
+  height: 6%;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 120%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.453);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.aboutMapButton{
+  top: 3%;
+  left: 90%;
+  position: absolute;
+  z-index: 1;
+  width: 6%;
+  height: 6%;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 120%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.453);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sarahImg{
+  position: absolute;
+  top: 120%;
+  left: -5%;
+  z-index: 3;
+  width: 70%;
+  height: 70%;
+}
+
+.sarahTextHead{
+  position: absolute;
+  top: 125%;
+  right: 3%;
+  z-index: 3;
+  width: 40%;
+  font-size: 70px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.sarahText{
+  position: absolute;
+  top: 140%;
+  right: 3%;
+  z-index: 3;
+  width: 40%;
+  font-size: 35px;
+  text-align: center;
+}
+
+
+.nicholasImg{
+  position: absolute;
+  top: 200%;
+  right: 0%;
+  z-index: 3;
+  width: 55%;
+  height: 55%;
+}
+
+.nichTextHead{
+  position: absolute;
+  top: 205%;
+  left: 4%;
+  z-index: 3;
+  width: 40%;
+  font-size: 70px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.nichText{
+  position: absolute;
+  top: 220%;
+  left: 4%;
+  z-index: 3;
+  width: 40%;
+  font-size: 35px;
+  text-align: center;
+}
+
+
+.melissaImg{
+  position: absolute;
+  top: 270%;
+  left: 0%;
+  z-index: 3;
+  width: 50%;
+  height: 50%;
+}
+
+.melTextHead{
+  position: absolute;
+  top: 270%;
+  right: 4%;
+  z-index: 3;
+  width: 40%;
+  font-size: 70px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.melText{
+  position: absolute;
+  top: 285%;
+  right: 4%;
+  z-index: 3;
+  width: 40%;
+  font-size: 35px;
+  text-align: center;
+}
+
+
+.brianImg{
+  position: absolute;
+  top: 345%;
+  right: 0%;
+  z-index: 3;
+  width: 50%;
+  height: 50%;
+}
+
+.briTextHead{
+  position: absolute;
+  top: 340%;
+  left: 4%;
+  z-index: 3;
+  width: 40%;
+  font-size: 70px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.briText{
+  position: absolute;
+  top: 355%;
+  left: 4%;
+  z-index: 3;
+  width: 40%;
+  font-size: 35px;
+  text-align: center;
+}
+
+
+.jereImg{
+  position: absolute;
+  top: 420%;
+  left: 0%;
+  z-index: 3;
+  width: 50%;
+  height: 50%;
+}
+
+.jereTextHead{
+  position: absolute;
+  top: 420%;
+  right: 4%;
+  z-index: 3;
+  width: 40%;
+  font-size: 70px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.jereText{
+  position: absolute;
+  top: 435%;
+  right: 4%;
+  z-index: 3;
+  width: 40%;
+  font-size: 35px;
+  text-align: center;
 }
