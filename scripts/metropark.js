@@ -137,6 +137,8 @@ function popUp(key){
         high.classList.add("weatherHigh");
         let low = document.createElement("p");
         low.classList.add("weatherLow");
+        let tempsDiv = document.createElement('div');
+        tempsDiv.classList.add("weatherTemps");
 
         //let todayHeader = document.createElement("h3");
         //low.classList.add("todayHeader");
@@ -154,10 +156,19 @@ function popUp(key){
         //add text to row
 
 
+        //if first element, append h3 containing "Today"
+        if(index === 0) {
+            let h3 = document.createElement('h3');
+            h3.innerText = "Today";
+            weatherList.appendChild(h3);
+        }
+
+
         //add row to list
         weatherList.appendChild(weatherRow);
-        weatherList.appendChild(high);
-        weatherList.appendChild(low);
+        weatherRow.appendChild(tempsDiv);
+        tempsDiv.appendChild(high);
+        tempsDiv.appendChild(low);
         
         
         //weatherList.appendChild(todayHeader)

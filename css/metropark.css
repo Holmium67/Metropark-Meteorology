@@ -147,16 +147,6 @@ button:hover{
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* MAP SECTION */
 
 
@@ -323,11 +313,6 @@ button:hover{
     cursor: pointer;
 }
 
-.point10:hover{
-  
-}
-
-
 
 
 /* point 11 */
@@ -380,16 +365,17 @@ button:hover{
   border: 0.5px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
   z-index: 10;
-  margin-left: 10px;
+  margin-left: 5%;
   margin-right: auto;
   margin-top: 15px;
+  padding: 5px 10px 10px 5px;
 }
 
 .weatherRow{
   display: flex;
   flex-direction: row;
-  padding-left:6px;
-  padding-right:50px;
+  padding-left: 6px;
+  padding-right: 50px;
   padding-bottom: 7px;
   padding-top: 15px;
 }
@@ -399,7 +385,7 @@ button:hover{
   flex-direction: column;
 }
 
-.weatherRow p {
+.weatherList p {
   text-align: center;
   font-size: 16px;
   padding-top: 5px;
@@ -409,11 +395,17 @@ button:hover{
   
 }
 
-.weatherRow h3{
-  font-family:'Times New Roman', Times, serif;
+.weatherList h3{
+  font-family: Arial, Helvetica, sans-serif;
   color: whitesmoke;
   text-shadow: 5px black;
   top: 0px;
+  text-align: center;
+}
+
+.weatherTemps {
+  display: flex;
+  flex-direction: column;
 }
 
 
