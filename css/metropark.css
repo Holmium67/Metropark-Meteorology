@@ -4,97 +4,6 @@
     box-sizing: border-box;
 }
 
-.background{
-    background: rgb(52, 109, 134);
-    width: 50%;
-    height: 100%;
-    z-index: 1;
-    position: absolute;
-    opacity: 85%;
-    background: rgba(104, 142, 202, 0.453);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 0.5px solid rgba(255, 255, 255, 0.3);
-
-}
-
-.metropark{
-    position: absolute;
-    font-size: 70px;
-    top: 10%;
-    left: 10%;
-    width: 20%;
-    z-index: 1;
-    color: rgb(242, 242, 242);
-   /* -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black; */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    font-variant: small-caps;
-    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.536));
-}
-
-.Meteorology{
-    position: absolute;
-    font-size: 80px;
-    top: 20%;
-    left: 5%;
-    width: 20%;
-    z-index: 1;
-    color: rgb(242, 242, 242);
-   /* -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black; */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    font-variant: small-caps;
-    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.536));
-}
-
-h2{
-    position: absolute;
-    font-size: 45px;
-    top: 40%;
-    left: 5%;
-    width: 40%;
-    z-index: 1;
-    color: rgb(242, 242, 242);
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.536));
-    box-sizing: border-box;
-}
-
-.cta{
-    top: 65%;
-    left: 17%;
-    position: absolute;
-    z-index: 1;
-    width: 15%;
-    height: 10%;
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 150%;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.453);
-    border-radius: 12px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4.3px);
-    -webkit-backdrop-filter: blur(4.3px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-button:hover{
-    background-color: rgb(255, 255, 255);
-    transition: 0.3s;
-}
-
 .mapButton{
     top: 3%;
     left: 82%;
@@ -141,7 +50,7 @@ button:hover{
     height: 100%;
     top: 0%;
     left: 0%;
-    z-index: 0;
+    z-index: -100;
     object-fit: cover;
 }
 
@@ -415,13 +324,8 @@ button:hover{
 /* ABOUT ME SECTION */
 
 
-.aboutBackground{
-  position: absolute;
-  width: 100%;
-  height: 400%;
-  top: 100%;
+.about {
   background-color: #c59f7c;
-  z-index: 1;
 }
 
 .aboutUsText{
@@ -430,7 +334,6 @@ button:hover{
   font-style: bold;
   color: rgb(255, 255, 255);
   position: absolute;
-  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -439,9 +342,10 @@ button:hover{
 }
 
 .aboutCloud{
-  display: flex;
-  width: 100%;
-  height: 70%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+
 }
 
 .aboutHomeButton{
@@ -485,156 +389,105 @@ button:hover{
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.sarahImg{
-  position: absolute;
-  top: 120%;
-  left: -5%;
-  z-index: 3;
-  width: 70%;
-  height: 70%;
+
+.portfolio {
+  display: flex;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex-direction: row;
 }
 
-.sarahTextHead{
-  position: absolute;
-  top: 125%;
-  right: 3%;
-  z-index: 3;
-  width: 40%;
-  font-size: 70px;
-  text-align: center;
-  text-decoration: underline;
-}
+/* #portfolios {
+  flex-direction: row-reverse;
+} */
 
-.sarahText{
-  position: absolute;
-  top: 140%;
-  right: 3%;
-  z-index: 3;
-  width: 40%;
-  font-size: 35px;
-  text-align: center;
-}
-
-
-.nicholasImg{
-  position: absolute;
-  top: 200%;
-  right: 0%;
-  z-index: 3;
-  width: 55%;
-  height: 55%;
-}
-
-.nichTextHead{
-  position: absolute;
-  top: 205%;
-  left: 4%;
-  z-index: 3;
-  width: 40%;
-  font-size: 70px;
-  text-align: center;
-  text-decoration: underline;
-}
-
-.nichText{
-  position: absolute;
-  top: 220%;
-  left: 4%;
-  z-index: 3;
-  width: 40%;
-  font-size: 35px;
-  text-align: center;
-}
-
-
-.melissaImg{
-  position: absolute;
-  top: 270%;
-  left: 0%;
-  z-index: 3;
+.portfolio img {
   width: 50%;
-  height: 50%;
+  height: auto;
 }
 
-.melTextHead{
-  position: absolute;
-  top: 270%;
-  right: 4%;
-  z-index: 3;
-  width: 40%;
-  font-size: 70px;
-  text-align: center;
-  text-decoration: underline;
+.portfolio-text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.melText{
-  position: absolute;
-  top: 285%;
-  right: 4%;
-  z-index: 3;
-  width: 40%;
-  font-size: 35px;
-  text-align: center;
-}
-
-
-.brianImg{
-  position: absolute;
-  top: 345%;
-  right: 0%;
-  z-index: 3;
+aside {
+  background: rgb(52, 109, 134);
   width: 50%;
-  height: 50%;
+  max-width: 480px;
+  min-height: 100vh;
+  height: auto !important;
+  height: 100vh;
+  z-index: 1;
+  opacity: 85%;
+  background: rgba(104, 142, 202, 0.453);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
 }
 
-.briTextHead{
-  position: absolute;
-  top: 340%;
-  left: 4%;
-  z-index: 3;
-  width: 40%;
-  font-size: 70px;
+aside h1 {
+  width: 100%;
+  font-size: 52px;
+  z-index: 1;
+  color: rgb(242, 242, 242);
+  /* -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
-  text-decoration: underline;
+  font-variant: small-caps;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.536));
 }
 
-.briText{
-  position: absolute;
-  top: 355%;
-  left: 4%;
-  z-index: 3;
-  width: 40%;
+#tagline {
   font-size: 35px;
-  text-align: center;
-}
-
-
-.jereImg{
-  position: absolute;
-  top: 420%;
-  left: 0%;
-  z-index: 3;
   width: 50%;
-  height: 50%;
+  margin-top: 15vh;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  color: rgb(242, 242, 242);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.536));
 }
 
-.jereTextHead{
-  position: absolute;
-  top: 420%;
-  right: 4%;
-  z-index: 3;
-  width: 40%;
-  font-size: 70px;
-  text-align: center;
-  text-decoration: underline;
+aside a {
+  text-decoration: none;
 }
 
-.jereText{
-  position: absolute;
-  top: 435%;
-  right: 4%;
-  z-index: 3;
-  width: 40%;
-  font-size: 35px;
-  text-align: center;
+.weatherBtn{
+  display: block;
+  z-index: 1;
+  width: 50%;
+  height: 10%;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 150%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.453);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 7vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover{
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s;
 }
