@@ -334,6 +334,7 @@
   font-style: bold;
   color: rgb(255, 255, 255);
   position: absolute;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -342,10 +343,9 @@
 }
 
 .aboutCloud{
-  width: 100vw;
+  width: 98.9vw;
   height: 100vh;
   object-fit: cover;
-
 }
 
 .aboutHomeButton{
@@ -395,28 +395,40 @@
   width: 100%;
   padding-left: 5%;
   padding-right: 5%;
-  margin-top: 10px;
+  margin-top: 50px;
   margin-bottom: 10px;
   flex-direction: row;
   justify-content: center;
   gap: 5%;
 }
 
+
+#portfolios .image2{
+  order: 2;
+}
+
+#portfolios .image4{
+  order: 2;
+}
+
+
 /* #portfolios {
   flex-direction: row-reverse;
-} */
+}  */
 
 .portfolio img {
-  width: 20vw;
+  width: 30vw;
   height: auto;
 }
 
 .portfolio-text {
   display: flex;
   flex-direction: column;
-  margin-top: 5px;
+  justify-content: center;
+  margin-top: 10px;
   margin-bottom: 5px;
   width: 40%;
+  font-size: 1.5vw;
 }
 
 aside {
