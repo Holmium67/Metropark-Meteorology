@@ -5,18 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metropark Meteorology</title>
-    <link rel="stylesheet" href="metropark.css">
+    <link rel="stylesheet" href="css/metropark.css">
 </head>
 <body>
-    <div class="background"></div>
-    <h1 class="metropark">Metropark</h1>
-    <h1 class="Meteorology">Meteorology</h1>
-    <h2>Here Is Where Your Forecast Begins</h2>
-    <video class="video" controls autoplay loop>
-        <source src="./Weather - 11057.mp4" type="video/mp4">
-        <source src="./Weather - 11057.mp4" type="production ID_5197505/ogg">
+    <aside>
+        <h1>Metropark</h1>
+        <h1>Meteorology</h1>
+        <h2 id="tagline">Here Is Where Your Forecast Begins</h2>
+        <a href="./parkMap.html">
+            <button class="weatherBtn">Show Me The Weather!</button>
+        </a>
+    </aside>
+    <video class="video" autoplay muted loop>
+        <source src="media/Weather_-_11057.mp4" type="video/mp4">
     </video>
-
-    <button>Show Me The Weather!</button>
+    <a href="./parkMap.html">
+        <button class="mapButton">Map</button>
+    </a>
+    
+    <a href="./aboutUs.html">
+        <button class="aboutButton">About Us</button>
+    </a>
 </body>
 </html>
